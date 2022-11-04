@@ -15,18 +15,13 @@ class Solution(object):
         length = len(sorted_l)
 
         if length%2 == 0:
-            if length > 4: 
-                crossed = (length - 2)/2
-            else:
-                crossed = 1
-            if length == 2:
-                first_index = sorted_l[0]
-                last_index = sorted_l[1]
-            else:    
-                first_index = sorted_l[crossed]
-                last_index = sorted_l[crossed+1]
+            crossed = (length - 2)/2
+            first_index = sorted_l[crossed]
+            last_index = sorted_l[crossed+1]
             result = float(first_index + last_index)/2
         else:
             result = sorted_l[int(math.ceil(length/2))]
     
         return result
+
+    
