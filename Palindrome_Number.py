@@ -7,7 +7,4 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        if str(x)[::-1] == str(x):
-            return True
-        else:
-            return False
+        return str(x)[::-1] == str(x)
